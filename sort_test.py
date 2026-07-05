@@ -30,3 +30,18 @@ def selection_sort(arr):
         nums[i], nums[min_index] = nums[min_index], nums[i]
 
     return nums
+
+def quick_sort(arr):
+    """
+    快速排序
+    """
+    nums = arr.copy()
+
+    if len(nums) <= 1:
+        return nums
+
+    pivot = nums[0]
+    left = [x for x in nums[1:] if x <= pivot]
+    right = [x for x in nums[1:] if x > pivot]
+
+    return quick_sort(left) + [pivot] + quick_sort(right)
