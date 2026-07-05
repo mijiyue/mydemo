@@ -1,4 +1,4 @@
-from sort_test import bubble_sort, selection_sort
+from sort_test import bubble_sort, selection_sort, insertion_sort
 
 
 def main():
@@ -7,6 +7,7 @@ def main():
     print("原始数据:", data)
     print("冒泡排序结果:", bubble_sort(data))
     print("选择排序结果:", selection_sort(data))
+    print("插入排序结果:", insertion_sort(data))
 
 
 if __name__ == "__main__":

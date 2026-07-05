@@ -30,3 +30,20 @@ def selection_sort(arr):
         nums[i], nums[min_index] = nums[min_index], nums[i]
 
     return nums
+def insertion_sort(arr):
+    """
+    插入排序
+    """
+    nums = arr.copy()
+
+    for i in range(1, len(nums)):
+        current = nums[i]
+        j = i - 1
+
+        while j >= 0 and nums[j] > current:
+            nums[j + 1] = nums[j]
+            j -= 1
+
+        nums[j + 1] = current
+
+    return nums
